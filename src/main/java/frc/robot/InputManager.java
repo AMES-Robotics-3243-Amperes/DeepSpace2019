@@ -17,7 +17,7 @@ public class InputManager {
 	boolean push = false;
 	boolean lightStatus = false;
 	boolean antiTurbo = false;
-	boolean visionButton = false;
+	boolean visionButton, ballPosition = false;
 	
 	boolean getAntiTurbo() {
 		antiTurbo = firstInput.getRawButton(9); //change to actual button
@@ -88,6 +88,13 @@ public class InputManager {
 		visionButton = firstInput.getRawButton(5);
 		
 		return visionButton;
+	}
+
+	public boolean getBallPosition(){
+
+		ballPosition = firstInput.getRawButton(0);
+
+		return ballPosition;
 	}
 
 }
